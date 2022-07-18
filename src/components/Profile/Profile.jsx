@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 // import { GoMention } from 'react-icons/go';
 import css from './Profile.module.css';
-import defaultImg from './default.jpg';
+import defaultImg from 'default.jpg';
 
 export const Profile = props => {
   const { username, tag, location, avatar = defaultImg, stats } = props;

@@ -1,0 +1,45 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+
+  background-color: #ffffff;
+
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  /* opacity: 1;
+  transition: opacity 250ms linear; */
+
+  cursor: pointer;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+/* .item:hover,
+.item:focus {
+  opacity: 0.8;
+
+  transition: opacity 250ms linear;
+} */
+
+.status {
+  margin: 0 15px;
+
+  display: inline-block;
+
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.avatar {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.name {
+  font-weight: 500;
+  color: #000000;
+}
