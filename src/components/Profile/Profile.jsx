@@ -1,35 +1,47 @@
 import PropTypes from 'prop-types';
 // import { GoMention } from 'react-icons/go';
-import css from './Profile.module.css';
+// import css from './Profile.module.css';
 import defaultImg from 'default.jpg';
+import {
+  ProfileWrapper,
+  DescriptionWrapper,
+  Image,
+  Name,
+  UserTag,
+  UserLocation,
+  StatsList,
+  StatsListItem,
+  ItemLabel,
+  ItemQuantity,
+} from './Profile.styled';
 
 export const Profile = props => {
   const { username, tag, location, avatar = defaultImg, stats } = props;
 
   return (
-    <div className={css.profile} key={username}>
-      <div className={css.description}>
-        <img src={avatar} alt={username} className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <ProfileWrapper key={username}>
+      <DescriptionWrapper>
+        <Image src={avatar} alt={username} />
+        <Name>{username}</Name>
+        <UserTag>@{tag}</UserTag>
+        <UserLocation>{location}</UserLocation>
+      </DescriptionWrapper>
 
-      <ul className={css.stats}>
-        <li className={css.item}>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{stats.followers}</span>
-        </li>
-        <li className={css.item}>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{stats.views}</span>
-        </li>
-        <li className={css.item}>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <StatsList>
+        <StatsListItem>
+          <ItemLabel>Followers</ItemLabel>
+          <ItemQuantity>{stats.followers}</ItemQuantity>
+        </StatsListItem>
+        <StatsListItem>
+          <ItemLabel>Views</ItemLabel>
+          <ItemQuantity>{stats.views}</ItemQuantity>
+        </StatsListItem>
+        <StatsListItem>
+          <ItemLabel>Likes</ItemLabel>
+          <ItemQuantity>{stats.likes}</ItemQuantity>
+        </StatsListItem>
+      </StatsList>
+    </ProfileWrapper>
   );
 };
 

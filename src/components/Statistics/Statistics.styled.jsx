@@ -1,4 +1,6 @@
-/* .statistics {
+import styled from 'styled-components';
+
+export const StatSection = styled.section`
   width: 300px;
 
   margin-right: auto;
@@ -8,11 +10,9 @@
   border-radius: 5px;
 
   background-color: #ffffff;
+`;
 
-  /* overflow: hidden; */
-/* } */
-
-/* .title {
+export const Title = styled.h2`
   padding: 20px 0;
 
   color: #768696;
@@ -20,13 +20,20 @@
   text-align: center;
   font-size: 19px;
   text-transform: uppercase;
-} */
-/* .statList {
+`;
+
+export const StatList = styled.ul`
   display: flex;
   justify-content: center;
-} */
+`;
 
-/* .item {
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
+
+export const StatItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,14 +44,16 @@
 
   text-align: center;
   color: #ffffff;
-} */
+  background-color: ${getRandomHexColor};
+  }};
+`;
 
-/* .label {
+export const StatLabel = styled.span`
   margin-bottom: 5px;
 
   font-size: 15px;
-}
+`;
 
-.percentage {
-  font-size: 1.2rem;
-} */
+export const StatPercentage = styled.span`
+  font-size: 20px;
+`;

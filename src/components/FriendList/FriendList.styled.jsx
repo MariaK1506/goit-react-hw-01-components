@@ -1,4 +1,6 @@
-/* .friendList {
+import styled from 'styled-components';
+
+export const List = styled.ul`
   display: flex;
   flex-direction: column;
 
@@ -6,7 +8,7 @@
 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 
   background-color: #ffffff;
-} */
+`;
