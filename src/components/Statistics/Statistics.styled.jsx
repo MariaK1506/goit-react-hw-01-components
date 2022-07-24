@@ -45,7 +45,6 @@ export const StatItem = styled.li`
   text-align: center;
   color: #ffffff;
   background-color: ${getRandomHexColor};
-  }};
 `;
 
 export const StatLabel = styled.span`
